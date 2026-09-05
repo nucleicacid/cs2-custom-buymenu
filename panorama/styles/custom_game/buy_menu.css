@@ -1,0 +1,64 @@
+.Root {
+    width: 100%;
+    height: 100%;
+}
+
+#dialog {
+    width: 1200px;
+    height: 600px;
+    margin-top: 220px;
+	horizontal-align: center;
+    flow-children: down;
+
+    padding: 20px;
+    background-color: #000000ee;
+    border: 1px solid green;
+    font-size: 30px;
+    color: white;
+
+    transition-property: opacity;
+    transition-duration: .1s;
+    opacity: 1;
+
+    &.Dismissed {
+        opacity: 0;
+    }
+}
+
+.TitleRow {
+    flow-children: right;
+    horizontal-align: center;
+}
+
+.Body {
+    vertical-align: center;
+    text-align: center;
+}
+
+.Subtitle {
+    vertical-align: center;
+    text-align: center;
+    margin-left: 20px;
+    font-size: 22px;
+    color: #cccccc;
+}
+
+.buy_button {
+	horizontal-align: center;
+    border-radius: 2px;
+    padding: 8px 15px;
+    margin-top: 20px;
+
+    background-color: #2b3a26;
+    border: 1px solid #4a5c3f;
+    color: #ffffff;
+
+    transition-property: background-color, border-color;
+    transition-duration: .1s;
+
+    &:hover {
+        background-color: #35492e;
+        border-color: #5ee65e;
+    }
+}
+
