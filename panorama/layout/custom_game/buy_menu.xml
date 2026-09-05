@@ -9,18 +9,158 @@
 				<Label class="Body" text="Buy Menu" />
 				<Label class="Subtitle" text="0.1.0-alpha" />
 			</Panel>
-			<Button id="ak47" class = "buy_button">
-				<Label text="AK-47" />
-			</Button>
-			<Button id="m4a1_silencer" class = "buy_button">
-				<Label text="M4A1-S" />
-			</Button>
-			<Button id="m4a1" class = "buy_button">
-				<Label text="M4A4" />
-			</Button>
-			<Button id="awp" class = "buy_button">
-				<Label text="AWP" />
-			</Button>
+
+			<Panel class="ButtonGrid">
+				<!-- Pistols -->
+				<Button id="glock" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Glock-18" />
+				</Button>
+				<Button id="hkp2000" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="P2000" />
+				</Button>
+				<Button id="usp_silencer" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="USP-S" />
+				</Button>
+				<Button id="p250" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="P250" />
+				</Button>
+				<Button id="fiveseven" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Five-SeveN" />
+				</Button>
+				<Button id="tec9" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Tec-9" />
+				</Button>
+				<Button id="cz75a" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="CZ75-Auto" />
+				</Button>
+				<Button id="elite" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Dual Berettas" />
+				</Button>
+				<Button id="deagle" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Desert Eagle" />
+				</Button>
+				<Button id="revolver" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="R8 Revolver" />
+				</Button>
+
+				<!-- SMGs -->
+				<Button id="mac10" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="MAC-10" />
+				</Button>
+				<Button id="mp9" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="MP9" />
+				</Button>
+				<Button id="mp7" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="MP7" />
+				</Button>
+				<Button id="mp5sd" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="MP5-SD" />
+				</Button>
+				<Button id="ump45" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="UMP-45" />
+				</Button>
+				<Button id="p90" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="P90" />
+				</Button>
+				<Button id="bizon" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="PP-Bizon" />
+				</Button>
+
+				<!-- Rifles -->
+				<Button id="galilar" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Galil AR" />
+				</Button>
+				<Button id="famas" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="FAMAS" />
+				</Button>
+				<Button id="ak47" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="AK-47" />
+				</Button>
+				<Button id="m4a1" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="M4A4" />
+				</Button>
+				<Button id="m4a1_silencer" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="M4A1-S" />
+				</Button>
+				<Button id="ssg08" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="SSG 08" />
+				</Button>
+				<Button id="sg556" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="SG 553" />
+				</Button>
+				<Button id="aug" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="AUG" />
+				</Button>
+				<Button id="awp" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="AWP" />
+				</Button>
+				<Button id="g3sg1" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="G3SG1" />
+				</Button>
+				<Button id="scar20" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="SCAR-20" />
+				</Button>
+
+				<!-- Heavy -->
+				<Button id="nova" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Nova" />
+				</Button>
+				<Button id="xm1014" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="XM1014" />
+				</Button>
+				<Button id="sawedoff" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Sawed-Off" />
+				</Button>
+				<Button id="mag7" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="MAG-7" />
+				</Button>
+				<Button id="m249" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="M249" />
+				</Button>
+				<Button id="negev" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Negev" />
+				</Button>
+
+				<!-- Equipment -->
+				<Button id="taser" class="buy_button">
+					<Panel class="weapon_icon" />
+					<Label text="Zeus x27" />
+				</Button>
+			</Panel>
 		</Panel>
 	</Panel>
 </root>
