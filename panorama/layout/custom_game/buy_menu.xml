@@ -1,6 +1,6 @@
 <root>
 	<styles>
-		<include src="file://{resources}/styles/custom_game/buy_menu.css" />
+		<include src="file://{resources}/styles/custom_game/buy_menu_style.css" />
 	</styles>
 
 	<Panel class="Root">
@@ -9,16 +9,16 @@
 				<Label class="Body" text="Buy Menu" />
 				<Label class="Subtitle" text="0.1.0-alpha" />
 			</Panel>
-			<Button id="buy_ak47" class = "buy_button">
+			<Button id="ak47" class = "buy_button">
 				<Label text="AK-47" />
 			</Button>
-			<Button id="buy_m4a1_silencer" class = "buy_button">
+			<Button id="m4a1_silencer" class = "buy_button">
 				<Label text="M4A1-S" />
 			</Button>
-			<Button id="buy_m4a1" class = "buy_button">
+			<Button id="m4a1" class = "buy_button">
 				<Label text="M4A4" />
 			</Button>
-			<Button id="buy_awp" class = "buy_button">
+			<Button id="awp" class = "buy_button">
 				<Label text="AWP" />
 			</Button>
 		</Panel>

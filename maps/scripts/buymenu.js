@@ -1,18 +1,25 @@
-import { CSDamageFlags, CSDamageTypes, CSInputs, Entity, Instance } from "cs_script/point_script";
+import { CSDamageFlags, CSDamageTypes, CSInputs, CSPlayerController, Entity, Instance } from "cs_script/point_script";
+
+const weapons = new Map([
+  ["ak47", 2700],
+  ["m4a1_silencer", 2900],
+  ["m4a1", 2900],
+  ["awp", 4750],
+]);
 
 let menuLayout = null;
-function GetWelcomeLayout() {
+function GetMenuLayout() {
     if (!(menuLayout instanceof Entity) || !menuLayout.IsValid()) {
-        menuLayout = Instance.FindEntitiesByName("welcome_layout")[0];
+        menuLayout = Instance.FindEntitiesByName("buymenu")[0];
     }
-    return Instance.FindEntitiesByName("welcome_layout")[0];
+    return Instance.FindEntitiesByName("buymenu")[0];
 }
 
 const buyMenuOpen = {};
 
 function SetBuyMenu(playerSlot, open) {
-    GetWelcomeLayout().SetHasClassForPlayer(playerSlot, "dialog", "Dismissed", !open);
-    GetWelcomeLayout().SetInputCaptureEnabled(playerSlot, open);
+    GetMenuLayout().SetHasClassForPlayer(playerSlot, "dialog", "Dismissed", !open);
+    GetMenuLayout().SetInputCaptureEnabled(playerSlot, open);
     buyMenuOpen[playerSlot] = open;
 }
 
@@ -38,30 +45,25 @@ Instance.OnCustomHudClicked((event) => {
     let primary = pawn.FindWeaponBySlot(0);
     let secondary = pawn.FindWeaponBySlot(1);
 
-    if (event.layout === GetWelcomeLayout() && event.buttonId === "buy_ak47") {
-        event.player.AddMoneySpendableNow(-2700);
-        pawn.DropWeapon(primary);
-        pawn.GiveNamedItem("weapon_ak47", true);
-    }
-    if (event.layout === GetWelcomeLayout() && event.buttonId === "buy_m4a1_silencer") {
-        event.player.AddMoneySpendableNow(-2900);
-        pawn.DropWeapon(primary);
-        pawn.GiveNamedItem("weapon_m4a1_silencer", true);
-    }
-    if (event.layout === GetWelcomeLayout() && event.buttonId === "buy_m4a1") {
-        event.player.AddMoneySpendableNow(-2900);
-        pawn.DropWeapon(primary);
-        pawn.GiveNamedItem("weapon_m4a1", true);
-    }
-    if (event.layout === GetWelcomeLayout() && event.buttonId === "buy_awp") {
-        event.player.AddMoneySpendableNow(-4750);
-        pawn.DropWeapon(primary);
-        pawn.GiveNamedItem("weapon_awp", true);
+    if (event.layout === GetMenuLayout()) {
+        purchaseWeapon(event.buttonId, pawn, event.player);
     }
 });
 
+function purchaseWeapon(weaponName, pawn, player) {
+    const primary = pawn.FindWeaponBySlot(0);
+    const secondary = pawn.FindWeaponBySlot(1);
+    let cost = weapons.get(weaponName)
+
+    if (player.GetMoneySpendableNow() >= cost) {
+        pawn.DropWeapon(primary);
+        pawn.GiveNamedItem(weaponName, true);
+        player.AddMoneySpendableNow(-cost);
+    }
+}
+
 Instance.RegisterCheatCommand("toggle_buymenu", () => {
     for (const player of Instance.GetAllPlayerControllers()) {
-        ToggleBuyMenu(player.GetPlayerSlot());
+        ToggleBuyMenu(player.GetPlayerSlot()); 
     }
 });
