@@ -1,0 +1,129 @@
+.Root {
+    width: 100%;
+    height: 100%;
+}
+
+#dialog {
+    width: 1280px;
+    height: 720px;
+    margin-top: 220px;
+	horizontal-align: center;
+    flow-children: down;
+
+    padding: 20px;
+    background-color: #000000ee;
+    border: 1px solid green;
+    font-size: 30px;
+    color: white;
+
+    transition-property: opacity;
+    transition-duration: .1s;
+    opacity: 1;
+
+    &.Dismissed {
+        opacity: 0;
+    }
+}
+
+.TitleRow {
+    flow-children: right;
+    horizontal-align: center;
+}
+
+.Body {
+    vertical-align: center;
+    text-align: center;
+}
+
+.Subtitle {
+    vertical-align: center;
+    text-align: center;
+    margin-left: 20px;
+    font-size: 22px;
+    color: #cccccc;
+}
+
+.ButtonGrid {
+    width: 1240px;
+    height: 600px;
+    margin-top: 20px;
+    horizontal-align: center;
+    flow-children: right-wrap;
+    overflow: squish scroll;
+}
+
+.weapon_icon {
+    width: 80px;
+    height: 44px;
+    vertical-align: center;
+    margin-right: 14px;
+    wash-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#glock    .weapon_icon { background-image: url("file://{images}/icons/glock.svg"); }
+#hkp2000  .weapon_icon { background-image: url("file://{images}/icons/hkp2000.svg"); }
+#usp_silencer .weapon_icon { background-image: url("file://{images}/icons/usp_silencer.svg"); }
+#p250     .weapon_icon { background-image: url("file://{images}/icons/p250.svg"); }
+#fiveseven .weapon_icon { background-image: url("file://{images}/icons/fiveseven.svg"); }
+#tec9     .weapon_icon { background-image: url("file://{images}/icons/tec9.svg"); }
+#cz75a    .weapon_icon { background-image: url("file://{images}/icons/cz75a.svg"); }
+#elite    .weapon_icon { background-image: url("file://{images}/icons/elite.svg"); }
+#deagle   .weapon_icon { background-image: url("file://{images}/icons/deagle.svg"); }
+#revolver .weapon_icon { background-image: url("file://{images}/icons/revolver.svg"); }
+#mac10    .weapon_icon { background-image: url("file://{images}/icons/mac10.svg"); }
+#mp9      .weapon_icon { background-image: url("file://{images}/icons/mp9.svg"); }
+#mp7      .weapon_icon { background-image: url("file://{images}/icons/mp7.svg"); }
+#mp5sd    .weapon_icon { background-image: url("file://{images}/icons/mp5sd.svg"); }
+#ump45    .weapon_icon { background-image: url("file://{images}/icons/ump45.svg"); }
+#p90      .weapon_icon { background-image: url("file://{images}/icons/p90.svg"); }
+#bizon    .weapon_icon { background-image: url("file://{images}/icons/bizon.svg"); }
+#galilar  .weapon_icon { background-image: url("file://{images}/icons/galilar.svg"); }
+#famas    .weapon_icon { background-image: url("file://{images}/icons/famas.svg"); }
+#ak47     .weapon_icon { background-image: url("file://{images}/icons/ak47.svg"); }
+#m4a1     .weapon_icon { background-image: url("file://{images}/icons/m4a1.svg"); }
+#m4a1_silencer .weapon_icon { background-image: url("file://{images}/icons/m4a1_silencer.svg"); }
+#ssg08    .weapon_icon { background-image: url("file://{images}/icons/ssg08.svg"); }
+#sg556    .weapon_icon { background-image: url("file://{images}/icons/sg556.svg"); }
+#aug      .weapon_icon { background-image: url("file://{images}/icons/aug.svg"); }
+#awp      .weapon_icon { background-image: url("file://{images}/icons/awp.svg"); }
+#g3sg1    .weapon_icon { background-image: url("file://{images}/icons/g3sg1.svg"); }
+#scar20   .weapon_icon { background-image: url("file://{images}/icons/scar20.svg"); }
+#nova     .weapon_icon { background-image: url("file://{images}/icons/nova.svg"); }
+#xm1014   .weapon_icon { background-image: url("file://{images}/icons/xm1014.svg"); }
+#sawedoff .weapon_icon { background-image: url("file://{images}/icons/sawedoff.svg"); }
+#mag7     .weapon_icon { background-image: url("file://{images}/icons/mag7.svg"); }
+#m249     .weapon_icon { background-image: url("file://{images}/icons/m249.svg"); }
+#negev    .weapon_icon { background-image: url("file://{images}/icons/negev.svg"); }
+#taser    .weapon_icon { background-image: url("file://{images}/icons/taser.svg"); }
+
+.buy_button {
+    width: 230px;
+    height: 58px;
+    margin: 6px;
+    flow-children: right;
+
+    border-radius: 3px;
+    padding: 8px 14px;
+    font-size: 16px;
+
+    background-color: #2b3a26;
+    border: 1px solid #4a5c3f;
+    color: #ffffff;
+
+    transition-property: background-color, border-color;
+    transition-duration: .1s;
+}
+
+.buy_button:hover {
+    background-color: #35492e;
+    border-color: #5ee65e;
+}
+
+.buy_button Label {
+    vertical-align: center;
+    white-space: nowrap;
+}
+
